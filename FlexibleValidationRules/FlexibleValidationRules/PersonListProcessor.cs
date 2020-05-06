@@ -20,7 +20,7 @@ namespace FlexibleValidationRules
                 if (isValid)
                 {
                     // scriu datele persoanei
-                    Console.WriteLine($"{p.FirstName} {p.LastName}");
+                    Console.WriteLine($"Person processed succesfully: {p.FirstName} {p.LastName}");
                 }
                 else
                 {

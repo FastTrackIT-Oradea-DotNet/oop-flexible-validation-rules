@@ -6,7 +6,10 @@ namespace FlexibleValidationRules
     {
         static void Main(string[] args)
         {
-            ValidationEngine validationEngine = null;
+            ValidationEngine validationEngine = new ValidationEngine(new ValidationRule[] 
+            {
+                new PersonlValidationRule()
+            });
 
             PersonListProcessor processor = new PersonListProcessor(validationEngine);
 
@@ -21,8 +24,8 @@ namespace FlexibleValidationRules
                 },
                 new Person
                 {
-                    FirstName = "John",
-                    LastName = "Doe",
+                    FirstName = "Johnny",
+                    LastName = "Deep",
                     CNP = "",
                     DateOfBirth = new DateTime(1976, 5, 20)
                 }
